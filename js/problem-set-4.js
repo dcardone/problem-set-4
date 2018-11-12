@@ -3,6 +3,7 @@
  */
 
 function hello() {
+  onclick
 
   // WRITE YOUR EXERCISE 1 CODE HERE
 
