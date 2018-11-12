@@ -3,9 +3,8 @@
  */
 
 function hello() {
-  onclick
-
-  // WRITE YOUR EXERCISE 1 CODE HERE
+  var p = document.getElementById("output1");
+  p.innerHTML = "Hello, AP Computer Science Principles!";
 
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
@@ -25,7 +24,9 @@ function helloAgain() {
   // Use the name variable declared above to store the user's response. You
   // do not need to re-declare it, only assign it a value.
 
-  // WRITE YOUR EXERCISE 2 CODE HERE
+  name = prompt("Please Enter Your Name");
+  var p = document.getElementById("output2");
+  p.innerHTML = "Hello, " + name + "!";
 
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
@@ -45,7 +46,9 @@ function celsius() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  // WRITE YOUR EXERCISE 3 CODE HERE
+  var ctof = (cels * (9/5) + 32).toFixed(2);
+  var p = document.getElementById("output3");
+  p.innerHTML = cels + " degrees Celsius equals " + ctof + " degrees Fahrenheit.";
 
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
@@ -65,7 +68,9 @@ function fahrenheit() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  // WRITE YOUR EXERCISE 4 CODE HERE
+  var ftoc = ((fahr - 32) * (5/9)).toFixed(2);
+  var p = document.getElementById("output4");
+  p.innerHTML = fahr + " degrees Fahrenheit equals " + ftoc + " degrees Celsius.";
 
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
@@ -89,7 +94,12 @@ function inches() {
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 5 CODE HERE
+  var miles = (inches / 63360).toFixed(0);
+  var yards = ((inches % 63360) / 36).toFixed(0);
+  var feet = ((yards % 36) /12).toFixed(0);
+  var inchLeft = (feet % 12).toFixed(0);
+  var p = document.getElementById("output5");
+  p.innerHTML = "Miles: " + miles  + "\n Yards: " + yards + "\n Feet: " + feet + "\n Inches: " + inchLeft;
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
