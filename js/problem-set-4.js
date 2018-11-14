@@ -94,12 +94,12 @@ function inches() {
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  var miles = (inches / 63360).toFixed(0);
-  var yards = ((inches % 63360) / 36).toFixed(0);
-  var feet = ((yards % 36) /12).toFixed(0);
-  var inchLeft = (feet % 12).toFixed(0);
+  var miles = Math.floor(inches / 63360);
+  var yards = Math.floor((inches % 63360) / 36);
+  var feet = Math.floor((inches % 36) / 12);
+  var inchLeft = Math.floor(inches % 12);
   var p = document.getElementById("output5");
-  p.innerHTML = "Miles: " + miles  + "\n Yards: " + yards + "\n Feet: " + feet + "\n Inches: " + inchLeft;
+  p.innerHTML = "Miles: " + miles  + "<br/>Yards: " + yards + "<br/>Feet: " + feet + "<br/>Inches: " + inchLeft;
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
@@ -123,7 +123,11 @@ function centimeters() {
   let centimeters = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 6 CODE HERE
+  var kilo = Math.floor(centimeters / 100000);
+  var meters = Math.floor((centimeters % 100000) / 100);
+  var centi = Math.floor(centimeters % 100);
+  var p = document.getElementById("output6");
+  p.innerHTML = "Kilometers: " + kilo  + "<br/>Meters: " + meters + "<br/>Centimeters: " + centi;
 
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
@@ -147,7 +151,14 @@ function fluidOunces() {
   let fluidOunces = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 7 CODE HERE
+  var gallons = Math.floor(fluidOunces / 128);
+  var quarts = Math.floor((fluidOunces % 128) / 32);
+  var pints = Math.floor((fluidOunces % 32) / 16);
+  var cups = Math.floor((fluidOunces % 16) / 8);
+  var flOunces = Math.floor(fluidOunces % 8);
+  var p = document.getElementById("output7");
+  p.innerHTML = "Gallons: " + gallons  + "<br/>Quarts: " + quarts + "<br/>Pints: " + pints + "<br/>Cups: " + cups + "<br/>Fluid Ounces: " + flOunces;
+
 
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
