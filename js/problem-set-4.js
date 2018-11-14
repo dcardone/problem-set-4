@@ -3,7 +3,7 @@
  */
 
 function hello() {
-  var p = document.getElementById("output1");
+  let p = document.getElementById("output1");
   p.innerHTML = "Hello, AP Computer Science Principles!";
 
   ////////////////// DO NOT MODIFY
@@ -25,7 +25,7 @@ function helloAgain() {
   // do not need to re-declare it, only assign it a value.
 
   name = prompt("Please Enter Your Name");
-  var p = document.getElementById("output2");
+  let p = document.getElementById("output2");
   p.innerHTML = "Hello, " + name + "!";
 
   ///////////////////////////// DO NOT MODIFY
@@ -46,8 +46,8 @@ function celsius() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  var ctof = (cels * (9/5) + 32).toFixed(2);
-  var p = document.getElementById("output3");
+  let ctof = (cels * (9/5) + 32).toFixed(2);
+  let p = document.getElementById("output3");
   p.innerHTML = cels + " degrees Celsius equals " + ctof + " degrees Fahrenheit.";
 
   ////////////////////////// DO NOT MODIFY
@@ -68,8 +68,8 @@ function fahrenheit() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  var ftoc = ((fahr - 32) * (5/9)).toFixed(2);
-  var p = document.getElementById("output4");
+  let ftoc = ((fahr - 32) * (5/9)).toFixed(2);
+  let p = document.getElementById("output4");
   p.innerHTML = fahr + " degrees Fahrenheit equals " + ftoc + " degrees Celsius.";
 
   ///////////////////////////// DO NOT MODIFY
@@ -94,11 +94,11 @@ function inches() {
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  var miles = Math.floor(inches / 63360);
-  var yards = Math.floor((inches % 63360) / 36);
-  var feet = Math.floor((inches % 36) / 12);
-  var inchLeft = Math.floor(inches % 12);
-  var p = document.getElementById("output5");
+  let miles = Math.floor(inches / 63360);
+  let yards = Math.floor((inches % 63360) / 36);
+  let feet = Math.floor((inches % 36) / 12);
+  let inchLeft = Math.floor(inches % 12);
+  let p = document.getElementById("output5");
   p.innerHTML = "Miles: " + miles  + "<br/>Yards: " + yards + "<br/>Feet: " + feet + "<br/>Inches: " + inchLeft;
 
   ////////////////////////// DO NOT MODIFY
@@ -123,10 +123,10 @@ function centimeters() {
   let centimeters = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  var kilo = Math.floor(centimeters / 100000);
-  var meters = Math.floor((centimeters % 100000) / 100);
-  var centi = Math.floor(centimeters % 100);
-  var p = document.getElementById("output6");
+  let kilo = Math.floor(centimeters / 100000);
+  let meters = Math.floor((centimeters % 100000) / 100);
+  let centi = Math.floor(centimeters % 100);
+  let p = document.getElementById("output6");
   p.innerHTML = "Kilometers: " + kilo  + "<br/>Meters: " + meters + "<br/>Centimeters: " + centi;
 
   /////////////////////////////// DO NOT MODIFY
@@ -151,12 +151,12 @@ function fluidOunces() {
   let fluidOunces = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  var gallons = Math.floor(fluidOunces / 128);
-  var quarts = Math.floor((fluidOunces % 128) / 32);
-  var pints = Math.floor((fluidOunces % 32) / 16);
-  var cups = Math.floor((fluidOunces % 16) / 8);
-  var flOunces = Math.floor(fluidOunces % 8);
-  var p = document.getElementById("output7");
+  let gallons = Math.floor(fluidOunces / 128);
+  let quarts = Math.floor((fluidOunces % 128) / 32);
+  let pints = Math.floor((fluidOunces % 32) / 16);
+  let cups = Math.floor((fluidOunces % 16) / 8);
+  let flOunces = Math.floor(fluidOunces % 8);
+  let p = document.getElementById("output7");
   p.innerHTML = "Gallons: " + gallons  + "<br/>Quarts: " + quarts + "<br/>Pints: " + pints + "<br/>Cups: " + cups + "<br/>Fluid Ounces: " + flOunces;
 
 
@@ -182,7 +182,11 @@ function ounces() {
   let ounces = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 8 CODE HERE
+  let tons = Math.floor(ounces / 32000);
+  let pounds = Math.floor((ounces % 32000) / 16);
+  let ouncesLeft = Math.floor(ounces % 16);
+  let p = document.getElementById("output8");
+  p.innerHTML = "Tons: " + tons  + "<br/>Pounds: " + pounds + "<br/>Ounces: " + ouncesLeft;
 
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
@@ -206,7 +210,13 @@ function money() {
   let pennies = input; // DO NOT MODIFY
   /////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 9 CODE HERE
+  let dollars = Math.floor(pennies / 100);
+  let quarters = Math.floor((pennies % 100) / 25);
+  let dimes = Math.floor((pennies % 25) / 10);
+  let nickels = Math.floor((pennies % 10) / 5);
+  let penniesLeft = Math.floor(pennies % 5);
+  let p = document.getElementById("output9");
+  p.innerHTML = "Dollars: " + dollars  + "<br/>Quarters: " + quarters + "<br/>Dimes: " + dimes + "<br/>Nickels: " + nickels + "<br/>Pennies: " + penniesLeft;
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
@@ -230,7 +240,14 @@ function change() {
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 10 CODE HERE
+  let quarters = Math.floor(amount / 4);
+  let dimes = Math.floor((amount % 4) / 10);
+  let nickels = Math.floor((amount % 10) / 20);
+  let pennies = Math.floor((amount % 20) / 100);
+  let coins = quarters + dimes + nickels + pennies;
+  let p = document.getElementById("output10");
+  p.innerHTML = `${coins} coins.`;
+
 
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
