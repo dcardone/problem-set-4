@@ -242,7 +242,7 @@ function change() {
 
   let quarters = Math.floor(amount / .25);
   let dimes = Math.floor((amount % .25) / .1);
-  let nickels = Math.ceil(((amount % .25) % .1) / .05);
+  let nickels = Math.floor(((amount % .25) % .1) / .05);
   let pennies = Math.floor((((amount % .25) % .1) % .05) / .01);
   let coins = Math.round(quarters + dimes + nickels + pennies);
   let p = document.getElementById("output10");
