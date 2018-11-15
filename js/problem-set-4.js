@@ -212,9 +212,9 @@ function money() {
 
   let dollars = Math.floor(pennies / 100);
   let quarters = Math.floor((pennies % 100) / 25);
-  let dimes = Math.floor((pennies % 25) / 10);
-  let nickels = Math.floor((pennies % 10) / 5);
-  let penniesLeft = Math.floor(pennies % 5);
+  let dimes = Math.floor(((pennies % 100) % 25) / 10);
+  let nickels = Math.floor((((pennies % 100) % 25) % 10) / 5);
+  let penniesLeft = Math.floor((((pennies % 100) % 25) % 10) % 5);
   let p = document.getElementById("output9");
   p.innerHTML = "Dollars: " + dollars  + "<br/>Quarters: " + quarters + "<br/>Dimes: " + dimes + "<br/>Nickels: " + nickels + "<br/>Pennies: " + penniesLeft;
 
@@ -240,13 +240,12 @@ function change() {
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  let quarters = Math.floor(amount / 4);
-  let dimes = Math.floor((amount % 4) / 10);
-  let nickels = Math.floor((amount % 10) / 20);
-  let pennies = Math.floor((amount % 20) / 100);
-  let coins = quarters + dimes + nickels + pennies;
+  let quarters = Math.floor((amount % 100) / 25);
+  let dimes = Math.floor(((amount % 100) % 25) / 10);
+  let nickels = Math.floor((((amount % 100) % 25) % 10) / 5);
+  let pennies = Math.floor((((amount % 100) % 25) % 10) % 5);
   let p = document.getElementById("output10");
-  p.innerHTML = `${coins} coins.`;
+  p.innerHTML = 'Quarters: ' + quarters + "<br/>" + 'Dimes: ' + dimes + "<br/>" + 'Nickels; ' + nickels + "<br/>" + 'Pennies: ' + pennies;
 
 
   ////////////////////////// DO NOT MODIFY
