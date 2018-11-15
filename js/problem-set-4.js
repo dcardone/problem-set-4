@@ -240,12 +240,13 @@ function change() {
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  let quarters = Math.floor((amount % 100) / 25);
-  let dimes = Math.floor(((amount % 100) % 25) / 10);
-  let nickels = Math.floor((((amount % 100) % 25) % 10) / 5);
-  let pennies = Math.floor((((amount % 100) % 25) % 10) % 5);
+  let quarters = Math.floor((amount % 100) / .25);
+  let dimes = Math.floor(((amount % 100) % .25) / .10);
+  let nickels = Math.floor((((amount % 100) % 25) % .10) / .5);
+  let pennies = Math.floor((((amount % 100) % 25) % .10) % .5);
+  let coins = quarters + dimes + nickels + pennies;
   let p = document.getElementById("output10");
-  p.innerHTML = 'Quarters: ' + quarters + "<br/>" + 'Dimes: ' + dimes + "<br/>" + 'Nickels; ' + nickels + "<br/>" + 'Pennies: ' + pennies;
+  p.innerHTML = `${coins} coins.`;
 
 
   ////////////////////////// DO NOT MODIFY
