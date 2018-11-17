@@ -214,7 +214,7 @@ function money() {
   let quarters = Math.floor((pennies % 100) / 25);
   let dimes = Math.floor(((pennies % 100) % 25) / 10);
   let nickels = Math.floor((((pennies % 100) % 25) % 10) / 5);
-  let penniesLeft = Math.floor((((pennies % 100) % 25) % 10) % 5)
+  let penniesLeft = Math.floor((((pennies % 100) % 25) % 10) % 5);
   let p = document.getElementById("output9");
   p.innerHTML = "Dollars: " + dollars  + "<br/>Quarters: " + quarters + "<br/>Dimes: " + dimes + "<br/>Nickels: " + nickels + "<br/>Pennies: " + penniesLeft;
 
