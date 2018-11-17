@@ -246,7 +246,7 @@ function change() {
   let pennies = Math.floor((((amount % .25) % .1) % .05) / .01);
   let coins = Math.round(quarters + dimes + nickels + pennies);
   let p = document.getElementById("output10");
-  p.innerHTML = `${coins} coins.`;
+  p.innerHTML = `${coins} coins.`
 
 
   ////////////////////////// DO NOT MODIFY
