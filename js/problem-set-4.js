@@ -240,13 +240,20 @@ function change() {
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  let quarters = Math.floor(amount / .25);
-  let dimes = Math.floor((amount % .25) / .1);
-  let nickels = Math.floor(((amount % .25) % .1) / .05);
-  let pennies = Math.floor((((amount % .25) % .1) % .05) / .01);
-  let coins = Math.round(quarters + dimes + nickels + pennies);
-  let p = document.getElementById("output10");
-  p.innerHTML = `${coins} coins.`;
+amount = amount * 100
+let numberOfQuarters = Math.floor(amount / 25);
+let numberOfDimes = Math.floor((amount % 25) / 10);
+let numberOfNickels = Math.floor(((amount % 25) % 10) / 5);
+let numberOfPennies = Math.floor(((amount % 25) % 10) % 5);
+let coins = numberOfQuarters + numberOfDimes + numberOfNickels + numberOfPennies;
+let ending;
+if (coins == 1) {
+  ending = " coin.";
+} else {
+  ending = " coins.";
+}
+let ten = document.getElementById('output10');
+ten.innerHTML = coins + ending;
 
 
   ////////////////////////// DO NOT MODIFY
